@@ -133,7 +133,7 @@ stellar-trust-escrow/
 │   ├── database/
 │   │   ├── schema.prisma          # Prisma data models
 │   │   └── migrations/            # Database migration history
-│   └── tests/                     # Jest test suites (425 tests)
+│   └── tests/                     # Jest and integration test suites
 ├── frontend/
 │   ├── app/                       # Next.js 14 App Router pages
 │   ├── components/                # Reusable React components
@@ -278,7 +278,7 @@ docker compose down
 ## Running Tests
 
 ```bash
-# All backend tests (39 suites, 425 tests)
+# All backend tests
 cd backend && npm test
 
 # Watch mode during development
@@ -288,7 +288,7 @@ cd backend && npm run test:watch
 cd backend && npm run test:coverage
 ```
 
-The Husky pre-push hook runs all backend tests automatically before every push to any branch. Pushes are blocked if any test fails or the branch name is invalid.
+The Husky pre-push hook runs the configured backend tests automatically before every push to any branch. Pushes are blocked if any test fails or the branch name is invalid.
 
 ---
 
